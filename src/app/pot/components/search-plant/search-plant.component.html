@@ -1,0 +1,19 @@
+<div class="custom-search-container">
+  <mat-icon matPrefix>search</mat-icon>
+  <input type="text" class="custom-search-input" [(ngModel)]="searchText" (ngModelChange)="filterPlants()" placeholder="Enter the plant you want to search for">
+</div>
+
+<br>
+<div class="plant-grid" *ngIf="filteredPlants.length > 0; else noResultsTemplate">
+  <div *ngFor="let plant of filteredPlants">
+    <app-card-plant [plantType]="plant"></app-card-plant>
+  </div>
+</div>
+
+<ng-template #noResultsTemplate>
+  <div class="no-results">
+    <img src="../../../../assets/plant-type/no results.png" alt="No results found">
+    <p>No found</p>
+    <p class="subtext">Sorry, the keyword you entered cannot be found. Please check again or search with another keyword.</p>
+  </div>
+</ng-template>

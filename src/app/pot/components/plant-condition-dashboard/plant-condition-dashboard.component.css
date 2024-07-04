@@ -1,0 +1,29 @@
+mat-card {
+  background: #EDEDED;
+  color: black;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 0 20px 20px 0;
+  height: 540px;
+  width: 600px;
+  max-width: 800px;
+}
+
+h4{
+  font-weight: bold;
+}
+  
+.footer-icons p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0;
+}
+  
+.mat-icon {
+  color: red;
+  margin-right: 10px;
+}
+
+.apexcharts-xaxis-label tspan {
+  white-space: pre;
+}

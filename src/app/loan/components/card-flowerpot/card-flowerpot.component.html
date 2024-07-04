@@ -1,0 +1,15 @@
+<div class="component-section" *ngIf="flowerpotAssignment">
+    <mat-card class="flowerpot-card" (click)="navigateToDetail()">
+        <div class="img-container">
+            <img mat-card-image [src]="flowerpotAssignment.photo" [alt]="flowerpotAssignment.name">
+        </div>
+        <div >
+            <mat-card-content>
+                <app-card-flowerpot-metrics class="icons-container" [flowerpotId]="flowerpotId" [plantTypeId]="flowerpotAssignment.plantTypeId"></app-card-flowerpot-metrics>
+            </mat-card-content>
+        </div>
+    </mat-card>
+    <div class="text-section">
+        <p>{{flowerpotAssignment.name.toUpperCase()}}</p>
+    </div>
+</div>

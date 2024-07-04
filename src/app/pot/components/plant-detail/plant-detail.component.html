@@ -1,0 +1,40 @@
+<body>
+  <div class="page-container">
+    <div class="header">
+      <mat-icon class="icon-header" (click)="onBack()">arrow_back</mat-icon>
+      <span class="plant-name">{{ plantTypeDetail.plantType.name }}</span>
+    </div>
+  
+    <div class="container" *ngIf="plantTypeDetail">
+      <div class="left-column">
+        <div class="img-container">
+          <img mat-card-image [src]="plantTypeDetail.plantType.photo" alt="{{ plantTypeDetail.plantType.name }}">
+        </div>
+      </div>
+  
+      <div class="right-column">
+        <h1>{{ plantTypeDetail.plantType.name }}</h1>
+        <h2>{{ plantTypeDetail.plantType.scientificName }}</h2>
+        <h3>Description:</h3>
+        <p>{{ plantTypeDetail.plantType.description }}</p>
+        <div class="parameters">
+          <div class="card">
+            <h4>Environmental Temperature:</h4>
+            <p>Minimum: {{ minTemperature?.value }} °C</p>
+            <p>Maximum: {{ maxTemperature?.value }} °C</p>
+          </div>
+          <div class="card">
+            <h4>Humidity of Floor:</h4>
+            <p>Minimum: {{ minHumidity?.value }} %</p>
+            <p>Maximum: {{ maxHumidity?.value }} %</p>
+          </div>
+          <div class="card">
+            <h4>Sunlight:</h4>
+            <p>Minimum: {{ minSunlight?.value }} UV</p>
+            <p>Maximum: {{ maxSunlight?.value }} UV</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

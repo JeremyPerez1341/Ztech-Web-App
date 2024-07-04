@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-card-content>
+    <div class="plant-image-container">
+      <img class="image-plant" [src]="flowerpotAssignment.photo">
+    </div>
+    <div class="status-indicators">
+      <div>
+        <mat-icon [ngStyle]="{'color': getTemperatureClass()}">thermostat</mat-icon>
+        <span [ngStyle]="{'color': getTemperatureClass()}">{{ flowerpot.lastTemperature }}°C</span>
+        <span [ngStyle]="{'color': getTemperatureClass()}">{{temperatureIndicator}}</span>
+      </div>
+      <div>
+        <mat-icon [ngStyle]="{'color': getHumidityClass()}">opacity</mat-icon>
+        <span [ngStyle]="{'color': getHumidityClass()}">{{ flowerpot.lastHumidity }}%</span>
+        <span [ngStyle]="{'color': getHumidityClass()}">{{humidityIndicator}}</span>
+      </div>
+      <div>
+        <mat-icon [ngStyle]="{'color': getSunlightClass()}">wb_sunny</mat-icon>
+        <span [ngStyle]="{'color': getSunlightClass()}">{{ flowerpot.lastSunlight }} UV</span>
+        <span [ngStyle]="{'color': getSunlightClass()}">{{sunlightIndicator}}</span>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

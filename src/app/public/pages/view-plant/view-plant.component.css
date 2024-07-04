@@ -1,0 +1,34 @@
+.dashboard {
+  display: flex;
+  justify-content: center;
+  grid-column-gap: 200px;
+}
+.plant{
+  margin-left: 20px;
+}
+
+.my-plant, .my-search {
+  flex-direction: column;
+}
+
+app-my-plant,
+app-search-plant {
+  flex-basis: 48%;
+  padding: 10px;
+}
+
+@media (max-width: 1250px) {
+  .dashboard {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+h3 {
+  font-size: 35px;
+  color: white;
+  margin-top: 20px;
+  text-align: left;
+  font-weight: bold;
+}

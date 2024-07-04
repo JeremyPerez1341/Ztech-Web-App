@@ -1,0 +1,43 @@
+.icons-container {
+  width: 100%;
+}
+
+mat-icon {
+  margin: 0 8px;
+}
+
+.temperature-low {
+  color: #428BCA;
+}
+
+.temperature-medium {
+  color: #5CAB5F;
+}
+
+.temperature-high {
+  color: #D14949;
+}
+
+.humidity-low {
+  color: #428BCA;
+}
+
+.humidity-medium {
+  color: #5CAB5F;
+}
+
+.humidity-high {
+  color: #D14949;
+}
+
+.sunlight-low {
+  color: #428BCA;
+}
+
+.sunlight-medium {
+  color: #5CAB5F;
+}
+
+.sunlight-high {
+  color: #D14949;
+}
